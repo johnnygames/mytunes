@@ -1,4 +1,4 @@
-describe('App', function() {
+  describe('App', function() {
   var app, fakeSongs;
 
   beforeEach(function() {
@@ -27,8 +27,10 @@ describe('App', function() {
     expect(app.get('currentSong')).to.equal(app.get('library').at(0));
   });
 
-  xit('queues the next song when an "enqueue" event is fired', function(){
+  it('queues the next song when an "enqueue" event is fired', function(){
+    //song model of the second song on the list, then call the enqueue();
     app.get('library').at(1).enqueue();
+    //checks for equality
     expect(app.get('songQueue').at(0)).to.equal(app.get('library').at(1));
   });
 
