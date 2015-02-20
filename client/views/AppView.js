@@ -16,7 +16,7 @@ var AppView = Backbone.View.extend({
       if(this.model.get('songQueue').length !== 0){
         this.model.get('songQueue').playFirst();
       }
-      this.songQueueView.render(); // what if the 'this' here is referring to something else? 
+      this.songQueueView.render();  
     }, this);
   },
 
